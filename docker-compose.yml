@@ -10,5 +10,13 @@ services:
       - open-webui-data:/app/backend/data
     restart: unless-stopped
 
+  campus-ai-api:
+    build:
+      context: ./backend
+    container_name: campus-ai-api
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
 volumes:
   open-webui-data:
