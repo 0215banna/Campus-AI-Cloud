@@ -16,7 +16,10 @@ services:
     container_name: campus-ai-api
     ports:
       - "8000:8000"
+    volumes:
+      - campus-ai-data:/app/data
     restart: unless-stopped
 
 volumes:
   open-webui-data:
+  campus-ai-data:
